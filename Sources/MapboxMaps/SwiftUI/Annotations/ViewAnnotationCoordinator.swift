@@ -78,7 +78,7 @@ private struct DisplayedViewAnnotation {
             }
         }
 
-        let vc = UIHostingController(rootView: wrapContent(viewAnnotation.content))
+        let vc = UIHostingController(rootView: wrapContent(viewAnnotation.content), ignoreSafeArea: true)
         self.viewController = vc
         self._update = { content in
             vc.rootView = wrapContent(content)
